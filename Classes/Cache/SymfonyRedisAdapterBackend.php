@@ -163,14 +163,12 @@ class SymfonyRedisAdapterBackend extends AbstractBackend implements TaggableBack
         $adapter->invalidateTags([$tag]);
     }
 
-
     /**
      * @param string $tag
      * @return array
      */
     public function findIdentifiersByTag(string $tag): array
     {
-        $adapter = $this->getAdapter();
         return [];
     }
 
@@ -183,6 +181,4 @@ class SymfonyRedisAdapterBackend extends AbstractBackend implements TaggableBack
         $result = new Result();
         return $result;
     }
-
-
 }
