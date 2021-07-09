@@ -9,15 +9,17 @@ This package is still under development. This message will disappear once the pa
 
 ## Configuration   
 
-The cache adapter is configured via the options `dsn` and `options` that are 
-documented here https://symfony.com/doc/current/components/cache/adapters/redis_adapter.html
-
+The cache adapter is configured via the options `dsn` and `options` from the symfony adapter.
 ```yaml
 Neos_Fusion_Content:
   backend: \Sitegeist\Neos\SymfonyRedisAdapter\Cache\SymfonyRedisAdapterBackend
   backendOptions:
     defaultLifetime: 86400
+    
+    # see: https://symfony.com/doc/current/components/cache/adapters/redis_adapter.html#configure-the-connection 
     dsn: 'redis://redis:6379'
+    
+    # see: https://symfony.com/doc/current/components/cache/adapters/redis_adapter.html#configure-the-options
     options:
       lazy: false
       persistent: 0
