@@ -139,7 +139,7 @@ class SymfonyRedisAdapterBackend extends AbstractBackend implements TaggableBack
     public function flush(): void
     {
         $adapter = $this->getAdapter();
-        $adapter->commit();
+        $adapter->clear();
     }
 
     /**
