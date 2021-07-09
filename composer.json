@@ -1,0 +1,19 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "sitegeist/neos-symfonyredisadapter",
+    "require": {
+        "neos/flow": "~5.0 || ~6.0 || ~7.0 || dev-master",
+        "symfony/cache": "~5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sitegeist\\Neos\\SymfonyRedisAdapter\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Sitegeist.Neos.SymfonyRedisAdapter"
+        }
+    }
+}
